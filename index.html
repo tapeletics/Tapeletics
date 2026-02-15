@@ -3,8 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Tapeletics | Wrist Tape Built by Athletes</title>
-  <meta name="description" content="Wrist tape built by athletes. Bulk pre-designed rolls and custom school-branded tape (logo + colors)." />
+  <title>Tapeletics | WIN. WAR. FIGHT.</title>
+  <meta name="description" content="Tapeletics wrist tape drop: WIN., WAR., FIGHT. $5/roll minimum or 5 rolls for $14." />
+
+  <!-- Optional favicon: if you upload favicon.png -->
+  <!-- <link rel="icon" href="favicon.png" /> -->
 
   <style>
     :root{
@@ -13,14 +16,13 @@
       --muted:#9aa3b2;
       --text:#f5f7ff;
       --line:rgba(255,255,255,.10);
-      --accent:#ffffff;
       --shadow: 0 14px 40px rgba(0,0,0,.45);
       --radius:18px;
     }
     *{box-sizing:border-box}
     body{
       margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
       color:var(--text);
       background:
         radial-gradient(900px 500px at 20% 0%, rgba(255,255,255,.08), transparent 60%),
@@ -29,35 +31,33 @@
       line-height:1.35;
     }
     a{color:inherit}
-    .wrap{max-width:1080px; margin:0 auto; padding:28px 18px 90px}
+    .wrap{max-width:1080px; margin:0 auto; padding:28px 18px 100px}
+
+    /* NAV */
     .nav{
       display:flex; align-items:center; justify-content:space-between;
-      padding:14px 0 10px;
+      padding:14px 0 10px; gap:12px;
     }
     .brand{
       display:flex; gap:10px; align-items:center; text-decoration:none;
-      font-weight:800; letter-spacing:.6px;
+      font-weight:900; letter-spacing:.4px;
     }
-    .logo{
-      width:34px; height:34px; border:1px solid var(--line);
-      border-radius:12px; display:grid; place-items:center;
+    .brand img{
+      width:38px; height:38px; object-fit:contain;
+      border:1px solid var(--line);
+      border-radius:12px;
       background:rgba(255,255,255,.04);
       box-shadow:0 10px 26px rgba(0,0,0,.35);
-      font-size:12px;
+      padding:6px;
     }
-    .navlinks{display:flex; gap:14px; align-items:center}
+    .navlinks{display:flex; gap:10px; align-items:center; flex-wrap:wrap}
     .navlinks a{
-      text-decoration:none; color:var(--muted); font-weight:600; font-size:14px;
+      text-decoration:none; color:var(--muted); font-weight:800; font-size:14px;
       padding:8px 10px; border-radius:12px;
     }
     .navlinks a:hover{color:var(--text); background:rgba(255,255,255,.06)}
-    .pill{
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.05);
-      padding:8px 12px; border-radius:999px;
-      font-size:13px; color:var(--muted);
-    }
 
+    /* HERO */
     .hero{
       margin-top:18px;
       padding:26px;
@@ -76,7 +76,7 @@
     }
     .grid{
       display:grid;
-      grid-template-columns: 1.1fr .9fr;
+      grid-template-columns: 1.15fr .85fr;
       gap:18px;
       position:relative;
       z-index:1;
@@ -85,8 +85,8 @@
       .grid{grid-template-columns:1fr}
     }
     h1{
-      margin:0 0 10px;
-      font-size:44px;
+      margin:10px 0 10px;
+      font-size:46px;
       letter-spacing:-.8px;
       line-height:1.05;
     }
@@ -94,8 +94,17 @@
       margin:0 0 18px;
       color:var(--muted);
       font-size:16px;
-      max-width:56ch;
+      max-width:62ch;
     }
+    .pill{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.05);
+      padding:8px 12px; border-radius:999px;
+      font-size:13px; color:var(--muted);
+      display:inline-flex; gap:8px; align-items:center;
+      font-weight:800;
+    }
+    .pill strong{color:var(--text)}
     .ctaRow{display:flex; gap:12px; flex-wrap:wrap; align-items:center}
     .btn{
       border:1px solid var(--line);
@@ -103,12 +112,13 @@
       color:var(--text);
       padding:12px 14px;
       border-radius:14px;
-      font-weight:800;
+      font-weight:900;
       text-decoration:none;
       display:inline-flex;
       gap:10px; align-items:center;
       box-shadow:0 10px 26px rgba(0,0,0,.25);
       transition: transform .08s ease, background .2s ease;
+      cursor:pointer;
     }
     .btn:hover{background:rgba(255,255,255,.10)}
     .btn:active{transform:translateY(1px)}
@@ -118,10 +128,8 @@
       border-color:transparent;
     }
     .btn.primary:hover{background:#ffffff}
-    .kpiRow{
-      margin-top:18px;
-      display:flex; gap:10px; flex-wrap:wrap;
-    }
+
+    .kpiRow{margin-top:18px; display:flex; gap:10px; flex-wrap:wrap}
     .kpi{
       border:1px solid var(--line);
       background:rgba(255,255,255,.04);
@@ -129,8 +137,11 @@
       border-radius:14px;
       color:var(--muted);
       font-size:13px;
+      font-weight:800;
     }
     .kpi strong{color:var(--text)}
+
+    /* CARDS / SECTIONS */
     .card{
       border:1px solid var(--line);
       background:rgba(17,19,26,.65);
@@ -140,24 +151,7 @@
     }
     .card h3{margin:0 0 8px; font-size:18px}
     .card p{margin:0; color:var(--muted); font-size:14px}
-    .mock{
-      margin-top:14px;
-      border:1px dashed rgba(255,255,255,.20);
-      border-radius:16px;
-      padding:14px;
-      background:rgba(255,255,255,.03);
-    }
-    .mock .row{display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap}
-    .tag{
-      display:inline-flex;
-      gap:8px; align-items:center;
-      border:1px solid var(--line);
-      border-radius:999px;
-      padding:6px 10px;
-      font-size:12px;
-      color:var(--muted);
-      background:rgba(255,255,255,.04);
-    }
+
     .section{
       margin-top:22px;
       display:grid;
@@ -167,18 +161,47 @@
     @media (max-width: 880px){
       .section{grid-template-columns:1fr}
     }
-    .bullets{
-      margin:10px 0 0; padding:0 0 0 18px;
-      color:var(--muted);
-      font-size:14px;
-    }
-    .bullets li{margin:6px 0}
+
     .divider{
       margin:22px 0;
       border:none;
       height:1px;
       background:linear-gradient(90deg, transparent, rgba(255,255,255,.12), transparent);
     }
+
+    .tagRow{margin-top:12px; display:flex; flex-wrap:wrap; gap:10px}
+    .tag{
+      display:inline-flex;
+      gap:8px; align-items:center;
+      border:1px solid var(--line);
+      border-radius:999px;
+      padding:8px 12px;
+      font-size:12px;
+      color:var(--muted);
+      background:rgba(255,255,255,.04);
+      font-weight:900;
+      letter-spacing:.3px;
+    }
+    .tag strong{color:var(--text)}
+
+    .priceBox{
+      margin-top:14px;
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:16px;
+      padding:14px;
+      background:rgba(255,255,255,.03);
+    }
+    .priceLine{
+      display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;
+      padding:8px 0;
+      border-bottom:1px solid rgba(255,255,255,.08);
+      font-weight:900;
+    }
+    .priceLine:last-child{border-bottom:none}
+    .priceLine span{color:var(--muted); font-weight:800}
+    .priceLine b{color:var(--text)}
+
+    /* FORM */
     .formGrid{
       display:grid;
       grid-template-columns: 1fr 1fr;
@@ -188,7 +211,7 @@
     @media (max-width: 620px){
       .formGrid{grid-template-columns:1fr}
     }
-    label{font-size:12px; color:var(--muted); font-weight:700}
+    label{font-size:12px; color:var(--muted); font-weight:900; letter-spacing:.2px}
     input, select, textarea{
       width:100%;
       margin-top:6px;
@@ -198,6 +221,7 @@
       background:rgba(255,255,255,.04);
       color:var(--text);
       outline:none;
+      font-weight:700;
     }
     textarea{min-height:110px; resize:vertical}
     input:focus, select:focus, textarea:focus{
@@ -208,8 +232,10 @@
       margin-top:10px;
       color:var(--muted);
       font-size:12px;
+      font-weight:700;
     }
 
+    /* STICKY */
     .sticky{
       position:fixed; left:0; right:0; bottom:0;
       padding:12px 14px;
@@ -223,7 +249,7 @@
       display:flex; align-items:center; justify-content:space-between;
       gap:12px; flex-wrap:wrap;
     }
-    .sticky .inner span{color:var(--muted); font-size:13px}
+    .sticky .inner span{color:var(--muted); font-size:13px; font-weight:800}
   </style>
 </head>
 
@@ -231,112 +257,110 @@
   <div class="wrap">
 
     <header class="nav">
-      <a class="brand" href="#top">
-        <div class="logo">T</div>
+      <a class="brand" href="#top" aria-label="Tapeletics home">
+        <!-- Upload your logo as logo.png in the repo -->
+        <img src="logo.png" alt="Tapeletics logo" />
         <div>TAPELETICS</div>
       </a>
+
       <nav class="navlinks">
-        <a href="#offer">Offer</a>
-        <a href="#mockups">Mockups</a>
-        <a href="#pricing">Bulk</a>
-        <a href="#contact">Contact</a>
+        <a href="#drop">Drop</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#comingsoon">Coming Soon</a>
+        <a href="#contact">Order</a>
       </nav>
     </header>
 
     <main id="top" class="hero">
       <div class="grid">
         <div>
-          <div class="pill">Wrist tape built by athletes</div>
-          <h1>Clean tape. Real performance. Your colors.</h1>
+          <div class="pill">Current drop: <strong>WIN.</strong> <strong>WAR.</strong> <strong>FIGHT.</strong></div>
+          <h1>Clean tape. Loud message.</h1>
           <p class="sub">
-            Tapeletics helps programs upgrade the look without changing what matters: durability, grip, and reliability.
-            Choose bulk pre-designed rolls or custom school-branded tape (logo + colors).
+            We’re selling out the first Tapeletics run — simple, bold, and built for athletes.
+            Grab individual rolls or lock the bundle deal.
           </p>
 
           <div class="ctaRow">
-            <a class="btn primary" href="#contact">Get bulk pricing →</a>
-            <a class="btn" href="#contact">Request custom mockups →</a>
-            <a class="btn" href="#mockups">View mockups PDF</a>
+            <a class="btn primary" href="#contact">Order now →</a>
+            <a class="btn" id="emailBtnTop" href="#">Email us →</a>
+            <a class="btn" href="#pricing">See pricing →</a>
           </div>
 
           <div class="kpiRow">
-            <div class="kpi"><strong>25k+</strong> followers nationwide</div>
-            <div class="kpi"><strong>Bulk</strong> team pricing available</div>
-            <div class="kpi"><strong>Custom</strong> logo + colors</div>
+            <div class="kpi"><strong>$5</strong> minimum per roll</div>
+            <div class="kpi"><strong>5 for $14</strong> bundle offer</div>
+            <div class="kpi"><strong>25k+</strong> followers</div>
           </div>
         </div>
 
-        <div class="card">
-          <h3>What you get</h3>
-          <p>Two easy options for your program:</p>
-          <ul class="bullets">
-            <li><strong>Pre-designed tape</strong> (bulk pricing)</li>
-            <li><strong>Custom school tape</strong> (logo + colors)</li>
-          </ul>
+        <div class="card" id="drop">
+          <h3>Available right now</h3>
+          <p>Pick your message. Same clean look, game-ready feel.</p>
+          <div class="tagRow" aria-label="Available designs">
+            <div class="tag"><strong>WIN.</strong> roll</div>
+            <div class="tag"><strong>WAR.</strong> roll</div>
+            <div class="tag"><strong>FIGHT.</strong> roll</div>
+          </div>
 
-          <div class="mock" id="mockups">
-            <div class="row">
-              <span class="tag">WIN.</span>
-              <span class="tag">WAR.</span>
-              <span class="tag">FIGHT.</span>
+          <div class="priceBox" id="pricing">
+            <div class="priceLine">
+              <span>Single roll (minimum)</span>
+              <b>$5</b>
+            </div>
+            <div class="priceLine">
+              <span>Bundle deal</span>
+              <b>5 rolls for $14</b>
             </div>
             <p class="small" style="margin:10px 0 0;">
-              Add your mockups here:
-              <br />
-              1) Upload the PDF to your site and set the link below
-            </p>
-
-            <!-- TODO: Replace with your real link (same folder as index.html is easiest) -->
-            <p class="small">
-              <a id="pdfLink" href="Tape%20Mockups%20(1).pdf" target="_blank" rel="noopener">Open Tape Mockups PDF</a>
+              Want a mix? Easy — tell us quantities for WIN./WAR./FIGHT. in the order form.
             </p>
           </div>
         </div>
       </div>
     </main>
 
-    <section id="offer" class="section">
+    <section class="section">
       <div class="card">
-        <h3>Bulk Pre-Designed Rolls</h3>
-        <p>Fast delivery, team-ready, and priced for programs.</p>
-        <ul class="bullets">
-          <li>Same performance as standard athletic tape</li>
-          <li>Cleaner, consistent look across the team</li>
-          <li>Easy re-ordering for the season</li>
-        </ul>
+        <h3>How to order (fast)</h3>
+        <p>Fill the order form and it’ll open a pre-written email to us. You hit send.</p>
+        <div class="tagRow">
+          <div class="tag">✅ Mix & match</div>
+          <div class="tag">✅ Quick reply</div>
+          <div class="tag">✅ Simple checkout</div>
+        </div>
       </div>
 
       <div class="card">
-        <h3>Custom School-Branded Tape</h3>
-        <p>Your logo + your colors. Built to match your identity.</p>
-        <ul class="bullets">
-          <li>Logo placement + color matching</li>
-          <li>Great for team culture + recruiting photos</li>
-          <li>Perfect for football, basketball, baseball, lacrosse</li>
-        </ul>
+        <h3>What’s next</h3>
+        <p>More designs are coming — we’re dropping new looks after we sell out this first run.</p>
+        <div class="tagRow">
+          <div class="tag">⚡ New drops</div>
+          <div class="tag">🏈 Athlete-built</div>
+          <div class="tag">📦 Shipping updates</div>
+        </div>
       </div>
     </section>
 
     <hr class="divider" />
 
-    <section id="pricing" class="section">
+    <section id="comingsoon" class="section">
       <div class="card">
-        <h3>Who we work with</h3>
-        <p>Best fit buyers (fast yes):</p>
-        <ul class="bullets">
-          <li>Athletic Trainers (ATCs)</li>
-          <li>Equipment Managers</li>
-          <li>Football Ops / Coordinators</li>
-          <li>Strength & Conditioning</li>
-        </ul>
+        <h3>Coming soon</h3>
+        <p>We’re cooking. No images yet — just a preview.</p>
+        <div class="tagRow">
+          <div class="tag">COMING SOON: <strong>Custom school colors</strong></div>
+          <div class="tag">COMING SOON: <strong>Logo rolls</strong></div>
+          <div class="tag">COMING SOON: <strong>Limited drops</strong></div>
+        </div>
+        <p class="small">Want first access? Put “Coming Soon list” in the notes when you email us.</p>
       </div>
 
       <div class="card">
-        <h3>Quick pitch (copy/paste)</h3>
-        <p style="margin-top:10px; color:var(--muted); font-size:14px;">
-          “We started Tapeletics because tape in high school never looked clean.
-          Now we offer bulk pre-designed rolls and custom school-branded tape (logo + colors).
-          Same performance as standard athletic tape — just cleaner and customizable.”
+        <h3>Why this matters</h3>
+        <p>
+          Tape is underrated. Everyone wears it — Tapeletics makes it intentional.
+          Clean look, bold message, built for athletes.
         </p>
       </div>
     </section>
@@ -344,62 +368,65 @@
     <hr class="divider" />
 
     <section id="contact" class="card">
-      <h3>Get pricing / Request custom mockups</h3>
-      <p>Fill this out and it’ll open an email pre-written to send to us.</p>
+      <h3>Order / Questions</h3>
+      <p>Send us your order — we’ll reply with payment + shipping steps.</p>
 
-      <form id="leadForm">
+      <div class="ctaRow" style="margin-top:12px;">
+        <a class="btn primary" href="#contact">Order form ↓</a>
+        <a class="btn" id="emailBtnMid" href="#">Email us →</a>
+        <a class="btn" id="bundleBtn" href="#">Get 5 for $14 →</a>
+      </div>
+
+      <p class="small">
+        Direct email: <a id="directEmail" href="#" style="text-decoration:underline;">tapeletics@gmail.com</a>
+      </p>
+
+      <form id="orderForm" style="margin-top:10px;">
         <div class="formGrid">
           <div>
             <label>Full name</label>
-            <input required name="name" placeholder="Coach / Trainer Name" />
-          </div>
-          <div>
-            <label>Role</label>
-            <select name="role">
-              <option>Coach</option>
-              <option>Athletic Trainer (ATC)</option>
-              <option>Equipment Manager</option>
-              <option>Strength & Conditioning</option>
-              <option>Other</option>
-            </select>
-          </div>
-
-          <div>
-            <label>School / Program</label>
-            <input required name="school" placeholder="School Name" />
+            <input required name="name" placeholder="Your name" />
           </div>
           <div>
             <label>Email</label>
-            <input required type="email" name="email" placeholder="name@school.edu" />
+            <input required type="email" name="email" placeholder="you@email.com" />
           </div>
 
           <div>
-            <label>Interested in</label>
-            <select name="interest">
-              <option>Bulk pre-designed tape (pricing)</option>
-              <option>Custom school-branded tape (logo + colors)</option>
-              <option>Both</option>
-            </select>
+            <label>WIN. quantity</label>
+            <input name="winQty" type="number" min="0" placeholder="0" />
           </div>
           <div>
-            <label>Sport</label>
-            <input name="sport" placeholder="Football / Basketball / Baseball..." />
+            <label>WAR. quantity</label>
+            <input name="warQty" type="number" min="0" placeholder="0" />
+          </div>
+
+          <div>
+            <label>FIGHT. quantity</label>
+            <input name="fightQty" type="number" min="0" placeholder="0" />
+          </div>
+          <div>
+            <label>Deal</label>
+            <select name="deal">
+              <option value="single">$5 per roll (minimum)</option>
+              <option value="bundle">Bundle: 5 rolls for $14</option>
+            </select>
           </div>
 
           <div style="grid-column: 1 / -1;">
-            <label>Notes (colors, logo, quantities, timeline)</label>
-            <textarea name="notes" placeholder="Example: Black/Gold, need 40 rolls for spring ball, want custom logo tape."></textarea>
+            <label>Shipping info + notes</label>
+            <textarea name="notes" placeholder="Address (or city/state), preferred mix, questions, etc."></textarea>
           </div>
         </div>
 
         <div class="ctaRow" style="margin-top:14px;">
-          <button type="submit" class="btn primary">Send request →</button>
-          <a class="btn" href="#mockups">View mockups</a>
+          <button type="submit" class="btn primary">Email my order →</button>
+          <button type="button" id="askBtn" class="btn">Ask a question →</button>
         </div>
 
         <p class="small">
-          If your mail app doesn’t open automatically, email us directly at:
-          <strong>tapeletics@gmail.com</strong> (replace with your official sales email if different).
+          When you click “Email my order,” it opens a pre-filled email to us. Just hit send.
+          If your email app doesn’t open, use the direct email above.
         </p>
       </form>
     </section>
@@ -408,46 +435,126 @@
 
   <div class="sticky">
     <div class="inner">
-      <span><strong>Tapeletics</strong> — bulk pricing + custom school tape (logo + colors)</span>
-      <a class="btn primary" href="#contact">Request pricing →</a>
+      <span><strong>Tapeletics</strong> — WIN. WAR. FIGHT. ($5/roll • 5 for $14)</span>
+      <a class="btn primary" href="#contact">Order now →</a>
     </div>
   </div>
 
   <script>
-    // === Configure this email to receive form submissions ===
-    const RECEIVER_EMAIL = "tapeletics@gmail.com"; // TODO: set to your Tapeletics inbox
+    // ====== SET YOUR SALES EMAIL HERE ======
+    const SALES_EMAIL = "tapeletics@gmail.com"; // change if needed
 
-    document.getElementById("leadForm").addEventListener("submit", function(e){
+    // Hook up direct email + buttons
+    const directEmail = document.getElementById("directEmail");
+    const emailBtnTop = document.getElementById("emailBtnTop");
+    const emailBtnMid = document.getElementById("emailBtnMid");
+    const bundleBtn = document.getElementById("bundleBtn");
+    const askBtn = document.getElementById("askBtn");
+
+    function mailto(subject, body){
+      const s = encodeURIComponent(subject);
+      const b = encodeURIComponent(body);
+      window.location.href = `mailto:${SALES_EMAIL}?subject=${s}&body=${b}`;
+    }
+
+    function baseEmailBody(){
+      return `Hey Tapeletics,
+
+I’m interested in ordering the current drop (WIN./WAR./FIGHT.).
+
+Name:
+Email:
+Order:
+WIN. qty:
+WAR. qty:
+FIGHT. qty:
+Deal (single or 5 for $14):
+Shipping info:
+
+Notes:
+
+—`;
+    }
+
+    directEmail.href = `mailto:${SALES_EMAIL}`;
+    emailBtnTop.href = `mailto:${SALES_EMAIL}`;
+    emailBtnMid.href = `mailto:${SALES_EMAIL}`;
+
+    emailBtnTop.addEventListener("click", (e) => {
+      e.preventDefault();
+      mailto("Tapeletics Order / Question", baseEmailBody());
+    });
+
+    emailBtnMid.addEventListener("click", (e) => {
+      e.preventDefault();
+      mailto("Tapeletics Order / Question", baseEmailBody());
+    });
+
+    bundleBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      mailto("Tapeletics Bundle — 5 rolls for $14", `Hey Tapeletics,
+
+I want the bundle deal: 5 rolls for $14.
+
+Name:
+Email:
+Mix (WIN/WAR/FIGHT quantities):
+Shipping info:
+
+Notes:
+
+—`);
+    });
+
+    askBtn.addEventListener("click", () => {
+      mailto("Tapeletics Question", `Hey Tapeletics,
+
+Quick question:
+
+(Write your question here)
+
+—`);
+    });
+
+    // Order form -> mailto with filled details
+    document.getElementById("orderForm").addEventListener("submit", function(e){
       e.preventDefault();
 
       const data = new FormData(e.target);
       const name = data.get("name") || "";
-      const role = data.get("role") || "";
-      const school = data.get("school") || "";
       const email = data.get("email") || "";
-      const interest = data.get("interest") || "";
-      const sport = data.get("sport") || "";
+      const winQty = data.get("winQty") || "0";
+      const warQty = data.get("warQty") || "0";
+      const fightQty = data.get("fightQty") || "0";
+      const deal = data.get("deal") || "single";
       const notes = data.get("notes") || "";
 
-      const subject = encodeURIComponent(`Tapeletics Inquiry — ${school} (${interest})`);
-      const body = encodeURIComponent(
-`Coach/Staff Name: ${name}
-Role: ${role}
-School/Program: ${school}
-Email: ${email}
-Sport: ${sport}
-Interested in: ${interest}
+      const subject = `Tapeletics Order — ${deal === "bundle" ? "5 for $14" : "$5 per roll"} — ${name}`;
+      const body =
+`Hey Tapeletics,
 
-Notes:
+I want to order the current drop (WIN./WAR./FIGHT.).
+
+Name: ${name}
+Email: ${email}
+
+WIN. qty: ${winQty}
+WAR. qty: ${warQty}
+FIGHT. qty: ${fightQty}
+
+Deal: ${deal === "bundle" ? "Bundle (5 for $14)" : "Single ($5 minimum per roll)"}
+
+Shipping info + notes:
 ${notes}
 
-—
-Sent from tapeletics.com`
-      );
+—`;
 
-      // mailto opens the user's email client with a pre-filled message
-      window.location.href = `mailto:${RECEIVER_EMAIL}?subject=${subject}&body=${body}`;
+      mailto(subject, body);
     });
+  </script>
+</body>
+</html>
+
   </script>
 </body>
 </html>
